@@ -61,13 +61,13 @@ chatForm.addEventListener("submit", async (event) => {
 // Fitur Pesan listener (Realtime)
  const queryPesan = query(messagesCollection, orderBy("waktu", "asc"))
  
- onSnapshot(queryPesan, (cuplikan)
+ onSnapshot(queryPesan,(snapshot)
  => {
      // Bersihkan chatBox sebelum menampilkan pesan baru
      chatBox.innerHTML = ""
      
      // tampilkan pesan baru di chatBox
-    cuplikan.forEach((doc) => {
+    snapshot.forEach((doc) => {
         // ambil data dari dokumen
         const data = doc.data()
         
