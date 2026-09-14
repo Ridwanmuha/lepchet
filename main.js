@@ -64,7 +64,7 @@ chatForm.addEventListener("submit", async (event) => {
  onSnapshot(queryPesan, (cuplikan)
  => {
      // Bersihkan chatBox sebelum menampilkan pesan baru
-     chatBox,innerHTMl = ""
+     chatBox.innerHTML = ""
      
      // tampilkan pesan baru di chatBox
     cuplikan.forEach((doc) => {
@@ -99,4 +99,4 @@ function renderPesan(username, message, waktu) {
     
     // menambahkan messageDiv ke chatBox
     chatBox.appendChild(messageDiv)
-}b
+}
